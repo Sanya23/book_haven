@@ -66,6 +66,7 @@
 			width: 950px;
 			/* Выравнивание по центру */
 			margin: 0 auto;
+			/*background-image: url('img/bg.png');*/
 		}
 		#sidebar {
 			/* Шырина боковой панели */
@@ -89,10 +90,9 @@
 		#news td {
 			/* Шырина новостей */
 			width: 347px;
-			padding-right: 25px;
+			padding-right: 15px;
 		}
 		#news td + td {
-			padding-right: 0;
 			padding-left: 15px;
 			border-left: 1px solid rgb(221,221,221);
 		}
@@ -107,7 +107,7 @@
 			color: rgb(102,102,102);
 		}
 		#description {
-			padding: 5px 0;
+			padding: 4px 0;
 			color: rgb(221,221,221);
 		}
 		.line-bottom {
@@ -116,14 +116,40 @@
 		.line-top {
 			border-top: 1px solid rgb(221,221,221);
 		}
+		.line-left {
+			border-left: 1px solid rgb(221,221,221);
+		}
+		#header {
+			padding-top: 18px;
+		}
+		#header img {
+			margin: 0 10px;
+		}
+		#header h1 {
+			padding-top: 34px;
+			margin-bottom: 31px;
+		}
+		#content img {
+			float: right;
+			margin: 15px;
+		}
 	</style>
 </head>
 <body>
 	<table class="container">
 		<tbody>
 			<tr>
-				<td colspan="3">
-					<h1>Book Haven</h1>
+				<td colspan="3" id="header">
+					<table>
+						<tr>
+							<td>
+								<img src="img/book-header.png" alt="Book Haven" title="Book Haven" />
+							</td>
+							<td>
+								<h1>Book Haven</h1>
+							</td>
+						</tr>
+					</table>
 				</td>
 			</tr>
 			<tr>
@@ -132,13 +158,14 @@
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2" class="line-bottom">
+				<td colspan="2" id="content" class="line-bottom">
 					<h3>Featured a Books</h3>
+					<img src="img/book-text.png" alt="Some book" title="Some book" />
 					<p>Конструктор форм использует объект CForm для описания параметров, необходимых для создания HTML формы, таких как модели и поля, используемые в форме, а также параметры построения самой формы. Разработчику достаточно создать объект CForm, задать его параметры и вызвать метод для построения формы.</p>
 					<p>Параметры формы организованы в виде иерархии элементов формы. Корнем является объект CForm. Корневой объект формы включает в себя две коллекции, содержащие другие элементы: CForm::buttons и CForm::elements. Первая содержит кнопки (такие как «Сохранить» или «Очистить»), вторая — поля ввода, статический текст и вложенные формы — объекты CForm, находящиеся в коллекции CForm::elements другой формы. Вложенная форма может иметь свою модель данных и коллекции CForm::buttons и CForm::elements.</p>
 				</td>
 				<td rowspan="3" id="sidebar">
-					<table cellspacing="10">
+					<table cellspacing="10" class="line-left">
 						<tbody>
 							<tr>
 								<th>
